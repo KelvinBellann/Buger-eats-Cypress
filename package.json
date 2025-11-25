@@ -4,14 +4,21 @@
   "description": " s",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "cy:open": "cypress open --e2e",
+    "cy:run": "cypress run --e2e",
+    "test": "npm run cy:open"
   },
   "author": "Kelvin Bellan",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^9.2.1",
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@types/node": "^18.19.3",
+    "cypress": "^13.6.0",
     "cypress-file-upload": "^5.0.8",
+    "esbuild": "^0.19.11",
     "faker": "^5.5.3",
-    "gerador-validador-cpf": "^5.0.2"
+    "gerador-validador-cpf": "^5.0.2",
+    "typescript": "^5.3.3"
   }
 }
