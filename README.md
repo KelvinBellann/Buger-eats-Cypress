@@ -1,4 +1,4 @@
-# Teste de GUI com Cypress
+# Teste de GUI com CYPRESS
 
 #### :information_source: O projeto de testes foi realizado sobre a aplicação [Buger Eats](https://buger-eats-qa.vercel.app), desenvolvida pelo [Fernando Papito](https://www.linkedin.com/in/papitoio/)
 
