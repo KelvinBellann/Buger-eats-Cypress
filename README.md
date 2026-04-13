@@ -43,6 +43,29 @@ OU
 $ npx cypress run
 ```
 
+## Suite de seguranca
+
+Foi adicionada uma lane de seguranca focada no que este repositorio realmente cobre: validacao de entrada no cadastro publico, upload obrigatorio, ausencia de erro sensivel na tela e higiene de configuracao do proprio repositorio.
+
+### Escopo coberto
+
+- `cypress/e2e/security`: cenarios de input tampering no formulario de cadastro
+- `cypress/support/security.ts`: payloads reutilizaveis
+- `scripts/security/repo-config-check.js`: prevencao de secrets hardcoded e `.env` versionado
+
+### Como executar
+
+```bash
+npm run test:security
+```
+
+### Limitacoes
+
+- Como o codigo da aplicacao alvo nao esta neste repositorio, controles de backend como auth, sessao, rate limiting, CORS, headers e upload server-side ficam como recomendacao manual
+- Os testes automatizados usam apenas o comportamento de UI realmente observado no fluxo de cadastro
+
+O baseline de risco segue OWASP Top 10 2025, com referencia a ASVS e WSTG. O detalhamento completo esta em [SECURITY_TEST_PLAN.md](./SECURITY_TEST_PLAN.md).
+
 
 ##
 Feito com carinho por Kelvin Bellan Borges. Entre em contato!

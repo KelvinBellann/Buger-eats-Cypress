@@ -6,7 +6,8 @@
   "scripts": {
     "cy:open": "cypress open --e2e",
     "cy:run": "cypress run --e2e",
-    "test": "npm run cy:open"
+    "test": "npm run cy:open",
+    "test:security": "node scripts/security/repo-config-check.js && cypress run --e2e --config specPattern=cypress/e2e/security/**/*.cy.ts"
   },
   "author": "Kelvin Bellan",
   "license": "MIT",
